@@ -7,12 +7,12 @@
     docker pull ghcr.io/codexss/xray-docker:main
     ```
 
-2. Run Xray in a detached mode, mapping your local `config.json` to the container's `/xray/config.json`:
+2. Run Xray in a detached mode, mapping your local Xray `config.json` folder to the container's `/etc/xray`:
 
     ```bash
-    docker run -d -v /path/to/config.json:/xray/config.json ghcr.io/codexss/xray-docker
+    docker run -v /etc/xray:/etc/xray ghcr.io/codexss/xray-docker
     ```
    
-Ensure to replace `/path/to/config.json` with the actual path to your Xray configuration file.
+Ensure to replace `/etc/xray` with the actual path to your Xray `config.json` file.
 
 This setup allows you to easily deploy and configure Xray using Docker.

@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-WORKDIR /xray
+WORKDIR /root
 
 RUN apk add --no-cache wget unzip
 
@@ -10,4 +10,4 @@ RUN wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-6
 
 RUN apk del wget unzip
 
-CMD ["./xray", "-c", "./config.json"]
+CMD ["./xray", "run", "-c", "/etc/xray/config.json"]
