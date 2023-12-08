@@ -4,7 +4,7 @@
 1. Pull the Xray Docker image from GitHub Container Registry (ghcr.io):
 
     ```bash
-    docker pull ghcr.io/codexss/xray-docker
+    docker pull ghcr.io/codexss/xray-docker:main
     ```
 
 2. Run Xray in a detached mode, mapping your local `config.json` to the container's `/xray/config.json`:
