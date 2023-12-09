@@ -7,12 +7,12 @@
     docker pull lentin/xray-docker
     ```
 
-2. Run Xray in a detached mode, mapping your local Xray `config.json` folder to the container's `/etc/xray`:
+2. Run Xray in a detached mode, mapping your local Xray `config.json` file to the container's `/root/config.json`:
 
     ```bash
-    docker run -v /etc/xray:/etc/xray lentin/xray-docker
+    docker run -v /path/to/config.json:/root/config.json lentin/xray-docker
     ```
    
-Ensure to replace `/etc/xray` with the actual path to your Xray `config.json` file.
+Ensure to replace `/root/config.json` with the actual path to your Xray `config.json` file.
 
 This setup allows you to easily deploy and configure Xray using Docker.
